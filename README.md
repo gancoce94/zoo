@@ -1,6 +1,9 @@
 # zoo
 API REST For Zoo
+Aplicación API Rest para gestion de Zoo, desarrollada en Java con framework Spring Boot.
 
-http://myhost:port/v2/api-docs
+## Listado de servicios
+https://ppm-rest-api-zoo.herokuapp.com/v2/api-docs
 
-http://myhost:port/swagger-ui.html#/animals-rest
+## Métodos Documentación
+https://ppm-rest-api-zoo.herokuapp.com/swagger-ui.html#/animals-rest
