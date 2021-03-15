@@ -1,0 +1,22 @@
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQL95Dialect
+                show-sql: true
+                format-sql: true
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/postgres
+        username: USER
+        password: PASS
+    mandatory-file-encoding: UTF-8
+
+server:
+    servlet:
+        encoding:
+            charset: UTF-8
+            enabled: true
+    
