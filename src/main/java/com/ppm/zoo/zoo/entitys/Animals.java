@@ -41,16 +41,16 @@ public class Animals {
     @Column(name = "cantidad", nullable = false, columnDefinition = "INT DEFAULT 0")
     private Integer cantidad;
 
-    @Column(name = "es_acuatico", nullable = false, columnDefinition = "BOOL DEFAULT FALSE")
+    @Column(name = "es_acuatico", nullable = true, columnDefinition = "BOOL DEFAULT FALSE")
     private Boolean acuatico;
 
     @CreatedDate
-    @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    @Column(name = "created_at", nullable = true, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaCreacion;
 
     @LastModifiedDate
-    @Column(name = "updated_at", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")    
+    @Column(name = "updated_at", nullable = true, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")    
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaModificacion;
 
@@ -136,6 +136,16 @@ public class Animals {
 
     public void setFechaModificacion(Date fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
+    }
+
+    public Animals(String nombreComun, String especie, String grupo, String habitat, String clasificacion, Integer cantidad, Boolean acuatico) {
+        this.nombreComun = nombreComun;
+        this.especie = especie;
+        this.grupo = grupo;
+        this.habitat = habitat;
+        this.clasificacion = clasificacion;
+        this.cantidad = cantidad;
+        this.acuatico = acuatico;
     }
 
 }
